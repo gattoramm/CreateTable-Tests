@@ -1,0 +1,1 @@
+create table test_table_1_column__alias_float4 (column_alias_float4 float4);

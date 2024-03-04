@@ -1,0 +1,1 @@
+create table test_table_1_column__timestamp_with_timezone_limit_3 (column_timestamp_with_timezone_limit timestamp(3) with time zone);

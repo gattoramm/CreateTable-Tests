@@ -1,0 +1,1 @@
+create table test_table_1_column__alias_serial4 (column_alias_serial4 serial4);

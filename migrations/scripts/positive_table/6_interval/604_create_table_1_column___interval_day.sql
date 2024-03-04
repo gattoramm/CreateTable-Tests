@@ -1,0 +1,1 @@
+create table test_table_1_column__interval_day (column_interval_day interval day);

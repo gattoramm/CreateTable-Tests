@@ -1,0 +1,1 @@
+create table test_table_1_column__alias_char_limit_255 (column_char_limit char(255));

@@ -1,0 +1,1 @@
+create table test_table_1_column__interval_day_to_second (column_interval_day_to_second interval day to second);

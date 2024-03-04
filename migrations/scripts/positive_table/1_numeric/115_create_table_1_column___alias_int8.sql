@@ -1,0 +1,1 @@
+create table test_table_1_column__alias_int8 (column_alias_int8 int8);

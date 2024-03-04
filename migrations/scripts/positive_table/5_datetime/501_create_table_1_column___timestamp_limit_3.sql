@@ -1,0 +1,1 @@
+create table test_table_1_column__timestamp_limit_3 (column_timestamp_limit timestamp(3));

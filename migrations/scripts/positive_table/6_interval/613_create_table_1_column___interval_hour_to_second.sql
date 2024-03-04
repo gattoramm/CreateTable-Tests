@@ -1,0 +1,1 @@
+create table test_table_1_column__interval_hour_to_second (column_interval_hour_to_second interval hour to second);

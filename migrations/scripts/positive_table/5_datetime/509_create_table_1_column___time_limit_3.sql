@@ -1,0 +1,1 @@
+create table test_table_1_column__time_limit_3 (column_time_limit time(3));

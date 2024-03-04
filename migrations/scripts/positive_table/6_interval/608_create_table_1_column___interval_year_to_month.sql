@@ -1,0 +1,1 @@
+create table test_table_1_column__interval_year_to_month (column_interval_year_to_month interval year to month);

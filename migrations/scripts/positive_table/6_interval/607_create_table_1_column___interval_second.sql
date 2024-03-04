@@ -1,0 +1,1 @@
+create table test_table_1_column__interval_second (column_interval_second interval second);

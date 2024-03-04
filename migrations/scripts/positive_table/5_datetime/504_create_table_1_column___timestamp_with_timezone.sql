@@ -1,0 +1,1 @@
+create table test_table_1_column__timestamp_with_timezone (column_timestamp_with_timezone timestamp with time zone);

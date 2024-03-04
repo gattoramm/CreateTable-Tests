@@ -1,0 +1,1 @@
+create table test_table_1_column__time (column_time time);

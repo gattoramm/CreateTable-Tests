@@ -1,0 +1,1 @@
+create table test_table_1_column__interval_hour_to_minute (column_interval_hour_to_minute interval hour to minute);

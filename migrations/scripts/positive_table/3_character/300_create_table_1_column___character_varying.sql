@@ -1,0 +1,1 @@
+create table test_table_1_column__character_varying (column_character_varying character varying);

@@ -1,0 +1,1 @@
+create table test_table_1_column__interval_second_limit_3 (column_interval_second_limit interval second(3));

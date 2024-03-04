@@ -1,0 +1,1 @@
+create table test_table_1_column__time_without_timezone (column_time_without_timezone time without time zone);

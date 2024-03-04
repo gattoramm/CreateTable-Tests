@@ -1,0 +1,1 @@
+create table test_table_1_column__double_precision (column_double_precision double precision);

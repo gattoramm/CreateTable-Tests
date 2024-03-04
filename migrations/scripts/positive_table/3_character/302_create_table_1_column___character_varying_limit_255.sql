@@ -1,0 +1,1 @@
+create table test_table_1_column__character_varying_limit_255 (column_character_varying_limit character varying(255));
