@@ -1,0 +1,1 @@
+create table test_table_1_column__alias_int4 (column_alias_int4 int4);

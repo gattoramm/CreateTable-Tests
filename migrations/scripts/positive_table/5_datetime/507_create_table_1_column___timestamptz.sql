@@ -1,1 +1,0 @@
-create table test_table_1_column__timestamptz (column_timestamptz timestamptz);
