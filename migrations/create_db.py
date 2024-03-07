@@ -15,14 +15,7 @@ def create_db():
         conn.autocommit = True
         with conn.cursor() as cur:
             cur.execute(sql.SQL(file))
-            # cur.execute("CREATE SCHEMA read_write")
-            # cur.execute("GRANT SELECT ON ALL TABLES IN SCHEMA read_only TO read_only_user")
-            # cur.execute("GRANT ALL ON ALL TABLES IN SCHEMA read_write TO read_write_user")
 
 
 def create_role(db_name, user, password, host, port, file_path):
     pass
-
-
-if __name__ == '__main__':
-    create_db()
