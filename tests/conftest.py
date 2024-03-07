@@ -19,17 +19,6 @@ def drop_tables(connection):
             cur.execute(f"DROP TABLE {table[0]}")
 
 
-# @pytest.fixture(scope="session")
-# def db_engine():
-#     default_db = (
-#         "postgresql://postgres:database@postgres:5432/postgres"
-#     )
-#     test_db = "postgresql://postgres:database@postgres:5432/test"
-#     engine = create_async_engine(default_db)
-#     if not database_exists(test_db):  # <- Getting error on this line
-#         create_database(test_db)
-
-
 @pytest.fixture(scope='session')
 def init_db():
     conn = dbc.get_connection(DB_CONF)
