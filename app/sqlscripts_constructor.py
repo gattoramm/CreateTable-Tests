@@ -7,7 +7,6 @@ class DatatypeReader:
     def __init__(self, config_file: str = TYPES):
         self.config_file = config_file
 
-    # в зависимости от того, какой тип из ini файла - по разному обрабатываем
     def get_map_types(self, is_aliases: bool, lst: dict) -> dict:
         config = configparser.ConfigParser()
         config.read(self.config_file)
@@ -25,10 +24,6 @@ def get_types(is_aliases: bool, lst: dict) -> list:
     return [val for key, value in reader.get_map_types(is_aliases, lst).items() for val in value]
 
 
-# создаем мапу - {тип данных: [название столбца, название таблицы]}
-map_type__table_column = dict()
-
-
 def get_list__type_table_column(is_aliases: bool, lst: dict) -> list:
     list__type_table_column = []
     for item in get_types(is_aliases, lst):
@@ -39,7 +34,9 @@ def get_list__type_table_column(is_aliases: bool, lst: dict) -> list:
     return list__type_table_column
 
 
-# sql скрипт создания таблиц без параметров
+map_type__table_column = dict()
+
+
 def get_scripts_create_tables(is_aliases: bool, lst: dict) -> list:
     scripts = []
     for item in get_list__type_table_column(is_aliases, lst):
@@ -53,7 +50,6 @@ def get_scripts_create_tables(is_aliases: bool, lst: dict) -> list:
     return scripts
 
 
-# sql скрипт создания таблиц с 1 параметром
 def get_scripts_create_tables_with_limit(is_aliases: bool, lst: dict, limit: int) -> list:
     scripts = []
     for item in get_list__type_table_column(is_aliases, lst):
@@ -73,7 +69,6 @@ def get_scripts_create_tables_with_limit(is_aliases: bool, lst: dict, limit: int
     return scripts
 
 
-# sql скрипт создания таблиц с 2 параметрами
 def get_scripts_create_tables_with_two_limit(is_aliases: bool, lst: dict, limit1: int, limit2: int) -> list:
     scripts = []
     for item in get_list__type_table_column(is_aliases, lst):
@@ -96,11 +91,9 @@ def get_scripts_create_tables_with_two_limit(is_aliases: bool, lst: dict, limit1
     return scripts
 
 
-# sql скрипт удаления созданных таблиц
 def get_scripts_drop_tables(is_aliases: bool, lst: dict) -> list:
     scripts = []
     for item in get_list__type_table_column(is_aliases, lst):
         sql_string = f"drop table {item[2]} cascade;"
         scripts.append(sql_string)
     return scripts
-
